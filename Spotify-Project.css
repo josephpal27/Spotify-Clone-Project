@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: CircularSpTitle, CircularSpTitle-Tall, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic";
+    transition: all 0.1s;
+}
+
+
+:root {
+    --main-bg: rgb(3, 3, 3);
+    --white: white;
+    --main-txt-col: rgb(219, 217, 217);
+    --sub-bg: rgb(20, 20, 20);
+    --green: rgb(8, 194, 8);
+    --gray: rgb(42, 42, 42);
+    --gray2: rgb(150, 150, 150);
+}
+
+html {
+    font-size: 90%;
+}
+
+#outer {
+    background-color: var(--main-bg);
+}
+
+.active {
+    background-color: var(--green) !important;
+    color: var(--white) !important;
+    border-radius: 0.5rem;
+}
+
+.active p {
+    color: var(--sub-bg) !important;
+}
+
+main {
+    padding: 0.5rem;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main:hover::-webkit-scrollbar-thumb {
+    background: var(--green);
+}
+
+.box-left {
+    min-width: 290px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.box {
+    background-color: var(--sub-bg);
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--main-txt-col);
+}
+
+/* edit scroll bar */
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* nav starts here */
+
+nav .item {
+    color: var(--white);
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+}
+
+nav .item:first-child {
+    font-weight: bold;
+}
+
+nav .item:first-child i {
+    font-size: larger;
+}
+
+nav .item:nth-child(2) {
+    margin: 1rem 0;
+}
+
+nav .item a {
+    text-decoration: none;
+    color: var(--main-txt-col);
+    font-size: 1.1rem;
+}
+
+nav .item a span {
+    padding-left: 0.7rem;
+}
+
+nav .item a:hover {
+    color: var(--white);
+}
+
+/* nav ends here */
+
+/* library starts */
+
+.library {
+    margin: 0.6rem 0;
+    padding: 1rem;
+    height: 200px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.library>h2 {
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    color: var(--main-txt-col);
+    padding-bottom: 0.5rem;
+}
+
+.library>div {
+    height: 92%;
+    overflow-y: scroll;
+}
+
+.library>div:hover::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+.card {
+    color: var(--white);
+    background-color: var(--gray);
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.card>*:nth-child(2) {
+    margin: 1rem 0;
+}
+
+
+/* library ends */
+.foot {
+    display: flex;
+    min-height: 120px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foot a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.foot button {
+    width: max-content;
+    border-radius: 50px;
+    padding: 0.5rem 0.7rem;
+    border: 1.5px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+p {
+    color: var(--main-txt-col);
+}
+
+
+
+/* right secrion */
+
+.box-right {
+    height: 100%;
+    background-color: rgb(56, 101, 101);
+    width: 80%;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.box-right::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/* nav section */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    /* background-color: rgba(0, 0, 0, 0.393); */
+    background-color: rgb(20, 20, 20);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    border-bottom: 2px solid black;
+}
+
+.nav div i {
+    background-color: var(--gray);
+    color: rgb(170, 170, 170);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.7rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+
+.nav div button {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+
+}
+
+.nav div button:hover {
+    transform: scale(1.02);
+}
+
+.nav div button:first-child {
+    background-color: transparent;
+    color: var(--gray2);
+}
+
+.nav div button:first-child:hover {
+    color: var(--white);
+}
+
+
+/* song-card section */
+.song-card {
+    display: flex;
+    padding: 1.5rem;
+}
+
+.song-card img {
+    height: 250px;
+    width: 250px;
+}
+
+.song-card .item:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 1.3rem;
+    color: var(--white);
+}
+
+.song-card .item .logo {
+    height: 25px;
+    width: 25px;
+}
+
+.song-card .item:first-child {
+    box-shadow: 0 0 25px 0px var(--sub-bg);
+    height: 250px;
+}
+
+.song-card .item>div {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.song-card .item>div a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.song-card .item>div a:hover {
+    text-decoration: underline;
+}
+
+.song-card .item>div span:last-child {
+    color: rgb(170, 170, 170);
+}
+
+.song-card .item p {
+    color: rgb(170, 170, 170);
+    padding: 0.7rem 0;
+}
+
+.song-card .item h2 {
+    font-size: 6rem;
+}
+
+.song-card .item>span {
+    padding-bottom: 0.6rem;
+}
+
+
+/* controls section */
+.control {
+    background-color: var(--sub-bg);
+    height: 150px;
+    position: sticky;
+    top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+    z-index: 25;
+}
+
+.main-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.control .range {
+    display: flex;
+    justify-content: center;
+}
+
+#proggres-bar {
+    width: 80%;
+    cursor: pointer;
+}
+
+#current-time,
+#duration {
+    color: white;
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+.control .control-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.control .control-btn div i {
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.control .control-btn div i:hover {
+    color: var(--green);
+}
+
+.song-img img {
+    border-radius: 7px;
+}
+
+
+
+
+
+/* title section */
+.title {
+    background-color: var(--sub-bg);
+    padding: 0rem 1rem;
+    position: sticky;
+    top: 214px;
+    z-index: 20;
+}
+
+.title>div {
+    border-bottom: 1px solid var(--gray);
+    display: grid;
+    color: var(--gray2);
+    grid-template-columns: 30px 1.5fr 1fr 1fr 50px;
+    padding: 0.5rem;
+}
+
+.title i {
+    margin-left: 0.6rem;
+}
+
+
+
+/* songs section */
+.songs {
+    padding: 1rem;
+    background-color: var(--sub-bg);
+}
+
+.songs .s-card {
+    display: grid;
+    grid-template-columns: 30px 1.5fr 1fr 1fr 50px;
+    color: var(--gray2);
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.layer {
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+}
+
+.songs .s-card:hover {
+    border-radius: 0.5rem;
+    background-color: var(--gray);
+}
+
+.songs .s-card span:first-child {
+    font-size: 1.15rem;
+}
+
+.songs .s-card .i-card {
+    display: flex;
+    align-items: center;
+}
+
+.songs .s-card .i-card img {
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.songs .s-card .i-card h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.songs .s-card .i-card p {
+    color: var(--gray2);
+}

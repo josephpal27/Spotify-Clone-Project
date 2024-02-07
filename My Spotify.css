@@ -1,0 +1,616 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s;
+    font-family: "CircularSpTitle", "CircularSpTitle-Tall", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic"; 
+}
+
+:root{
+    --black: black;
+    --white: white;
+    --main-txt-col: rgb(219, 217, 217);
+    --sub-bg: rgb(22, 22, 22);
+    --green: rgb(12, 204, 12);
+    --grey: rgb(42, 42, 42);
+    --grey2: rgb(150, 150, 150);
+}
+
+/* Edit Scroll Bar */
+::-webkit-scrollbar{
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Edit Scroll Bar */
+
+.outer{
+    background-color: var(--black);
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    padding: 0.7rem;
+    overflow: hidden;
+    /* max-width: 2000px;
+    margin: 0 auto; */
+}
+
+.box-left{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+/* Nav Starts Here */
+
+.box{
+    background-color: var(--sub-bg);
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 0.7rem;
+}
+
+nav .item{
+    color: var(--white);
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+nav .item:first-child{
+    font-weight: bold;
+}
+
+nav .item:first-child i{
+    font-size: 1.9rem;
+    padding-right: 0.5rem;
+}
+
+nav .item:nth-child(2){
+    margin: 1rem 0;
+}
+
+nav .item a{
+    text-decoration: none;
+    color: var(--main-txt-col);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav .item a span{
+    padding-left: 0.7rem;
+}
+
+
+nav .item a:hover{
+    color: var(--white);
+}
+
+/* Nav Ends Here */
+
+/* Library Starts Here */
+.my-library{
+    margin: .6rem 0;
+    padding: 1rem;
+    background-color: var(--sub-bg);
+    border-radius: 0.7rem;
+    height: 200px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.my-library>h2{
+    font-size: 1.4rem;
+    padding: 0.5rem 0 1rem 1.6rem;
+    color: var(--main-txt-col);
+    font-weight: bold;
+}
+
+.my-library>div{
+    height: 85%;
+    overflow-y: scroll;
+}
+
+.my-library>div:hover::-webkit-scrollbar-thumb{
+    background: var(--grey2);
+}
+
+.card{
+    color: var(--white);
+    background-color: var(--grey);
+    padding: 1.2rem;
+    border-radius: 0.7rem;
+    margin: 1rem 0;
+}
+
+.card>:nth-child(2) {
+    margin: 1.2rem 0;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--main-txt-col);
+}
+
+/* Library Ends Here */
+
+/* Footer Starts Here */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--main-txt-col);
+    font-size: 0.8rem;
+}
+
+.footer a:hover{
+    color: var(--white);
+}
+
+.footer button{
+    width: max-content;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0.5rem 0.8rem;
+    border: 1.5px solid var(--grey2);
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer button:hover{
+    transform: scale(1.05);
+    border: 1.5px solid var(--white);
+}
+
+/* Footer Ends Here */
+
+
+/* Right Section Starts Here*/
+.box-right{
+    height: 97vh;
+    /* background-color: rgb(167, 142, 112); */
+    width: 85%;
+    margin: 0 0 0 0.7rem;
+    border-radius: 0.6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.box-right::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Right NavBar */
+.navbar{
+    background-color: var(--sub-bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 1.7rem;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    border-bottom: 3px solid var(--black);
+}
+
+.navbar div i{
+    background-color: var(--grey);
+    color: var(--main-txt-col);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+
+.navbar div i:hover{
+    color: var(--white);
+}
+
+.navbar div button{
+    font-size: 1.2rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    background-color: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    border: transparent;
+}
+
+.navbar div button:hover{
+    transform: scale(1.05);
+}
+
+.navbar div button:first-child{
+    background-color: transparent;
+    color: var(--grey2);
+}
+
+.navbar div button:first-child:hover{
+    color: var(--white);
+}
+
+/* Song Cover Art Section */
+.song-cover{
+    display: flex;
+    padding: 2rem;
+    background-color: rgb(40, 74, 71);
+}
+
+.song-cover .item:first-child{
+    width: 200px;
+    height: 200px;
+}
+
+.song-cover .item:first-child img{
+    width: 200px;
+    height: 200px;
+}
+
+.song-cover .item:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 1.3rem;
+    color: var(--white);
+}
+
+.song-cover .item .logo{
+    width: 40px;
+    height: 40px;
+}
+
+.song-cover .item:first-child{
+    box-shadow: 0 0 15px 0 var(--sub-bg);
+}
+
+.song-cover .item>div{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.song-cover .item>div a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.song-cover .item>div a:hover {
+    text-decoration: underline;
+}
+
+.song-cover .item>div span{
+    font-weight: bold;
+}
+
+.song-cover .item>div span:last-child {
+    color: var(--main-txt-col);
+    font-weight: 500;
+}
+
+.song-cover .item p {
+    color: var(--main-txt-col);
+    padding: 0.7rem 0;
+    font-weight: 600;
+}
+
+.song-cover .item h2 {
+    font-size: 5rem;
+}
+
+.song-cover .item>span {
+    padding-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+
+ /* Audio Controls Section  */
+ .player{
+    background-color: var(--sub-bg);
+    height: 150px;
+    position: sticky;
+    top: 65px;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+    z-index: 8;
+ }
+
+ .control{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+ }
+
+ .player .range{
+    display: flex;
+    justify-content: center;
+ }
+
+ #proggres-bar{
+    width: 80%;
+    cursor: pointer;
+}
+
+#current-time,
+#duration{
+    color: var(--white);
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+.player .control-btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player .control-btn>div i{
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.player .control-btn>div i:hover{
+    color: var(--green);
+}
+
+.player .control-btn>div:last-child i:hover{
+    color: red;
+}
+
+
+/* Title Bar Section */
+.title{
+    background-color: var(--sub-bg);
+    padding: 0 1rem;
+    position: sticky;
+    top: 215px;
+    z-index: 5;
+}
+
+.title>div{
+    color: var(--grey2);
+    border-bottom: 1px solid var(--grey);
+    display: grid;
+    grid-template-columns: 30px 1.5fr 1fr 1fr 50px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.title i{
+    margin-left: 0.7rem;
+}
+ 
+
+/* Songs Section */
+.songs{
+    background-color: var(--sub-bg);
+    padding: 1rem;
+}
+
+.songs .s-card{
+    display: grid;
+    grid-template-columns: 30px 1.5fr 1fr 1fr 50px;
+    color: var(--grey2);
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.upper-layer{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    cursor: pointer;
+    /* background-color: blueviolet; */
+}
+
+.songs .s-card:hover{
+    border-radius: 0.5rem;
+    background-color: var(--grey);
+}
+
+.songs .s-card span:first-child{
+    font-size: 1.15rem;
+}
+
+.songs .s-card span{
+    font-weight: 500;
+}
+
+.songs .s-card .img-card{
+    display: flex;
+    align-items: center;
+}
+
+.songs .s-card .img-card img{
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.songs .s-card .img-card h3{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.songs .s-card .img-card p{
+    color: rgb(197, 196, 196);
+}
+
+
+/* For Showing The Perticular Song is Ative */
+/* .active{
+    background-color: var(--green) !important;
+    color: var(--white) !important;
+    border-radius: 0.5rem;
+}
+.active p{
+    color: var(--sub-bg) !important;
+    font-weight: bold;
+} */
+
+
+
+/* --------- Media Quary ---------- */
+
+@media screen and (max-width: 1100px) {
+
+    .box-left{
+        min-width: 200px;
+    }
+
+    nav .item{
+        font-size: 1.1rem;
+    }
+    
+    nav .item:first-child i{
+        font-size: 1.7rem;
+        padding-right: 0.5rem;
+    }
+
+    nav .item a{
+        font-size: 1rem;
+    }
+
+    .my-library>h2{
+        font-size: 1.2rem;
+    }
+
+    .card h3{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.8rem;
+    }
+    
+    .card .btn{
+        font-size: 0.75rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .footer a{
+        font-size: 0.7rem;
+    }
+
+    .footer button{
+        font-size: 0.7rem;
+    }
+
+    /* Right Side */
+
+    .navbar{
+        padding: 0.3rem 1.4rem;
+    }
+    
+    .navbar div i{
+        font-size: 1.2rem;
+        padding: 0.6rem 0.9rem;
+    }
+        
+    .navbar div button{
+        font-size: 1rem;
+        padding: 0.6rem 1.1rem;
+    }
+
+    .song-cover .item h2 {
+        font-size: 3.5rem;
+    }
+
+    .song-cover .item>div{
+        font-size: 0.7rem;
+        gap: 0.3rem;
+    }
+
+    .song-cover .item:first-child{
+        width: 150px;
+        height: 150px;
+    }
+
+    .song-cover .item:first-child img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .song-cover .item .logo{
+        width: 25px;
+        height: 25px;
+    }
+
+    .player{
+        position: sticky;
+        top: 50px;
+     }
+    
+    .player .control-btn>div i{
+        font-size: 1.6rem;
+    }
+
+    #proggres-bar{
+        width: 75%;
+    }
+
+    #current-time,
+    #duration{
+    font-size: 12px;
+    } 
+
+    .song-img img{
+    height: 110px;
+    width: 110px;
+    margin-left: 1rem;
+    }
+
+    .title{
+    position: sticky;
+    top: 200px;
+    }
+
+    .songs .s-card .img-card h3{
+    font-size: 0.9rem;
+    }
+
+    .songs .s-card .img-card p{
+   font-size: 0.8rem;
+   margin-top: 3px;
+    }
+
+   .songs .s-card span{
+    font-size: 0.8rem;
+    }  
+}
+
+
+
