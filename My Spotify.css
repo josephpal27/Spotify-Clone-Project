@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: all 0.1s;
-    font-family: "CircularSpTitle", "CircularSpTitle-Tall", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic"; 
+    font-family: "CircularSpTitle", "CircularSpTitle-Tall", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic";
 }
 
-:root{
+:root {
     --black: black;
     --white: white;
     --main-txt-col: rgb(219, 217, 217);
@@ -17,7 +17,7 @@
 }
 
 /* Edit Scroll Bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0.7rem;
 }
 
@@ -31,11 +31,11 @@
 
 /* Edit Scroll Bar */
 
-.outer{
+.outer {
     background-color: var(--black);
 }
 
-main{
+main {
     display: flex;
     height: 100vh;
     padding: 0.7rem;
@@ -44,7 +44,7 @@ main{
     margin: 0 auto; */
 }
 
-.box-left{
+.box-left {
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -54,13 +54,13 @@ main{
 
 /* Nav Starts Here */
 
-.box{
+.box {
     background-color: var(--sub-bg);
     padding: 1rem 1rem 1rem 2rem;
     border-radius: 0.7rem;
 }
 
-nav .item{
+nav .item {
     color: var(--white);
     font-size: 1.3rem;
     padding-left: 0.5rem;
@@ -68,39 +68,39 @@ nav .item{
     align-items: center;
 }
 
-nav .item:first-child{
+nav .item:first-child {
     font-weight: bold;
 }
 
-nav .item:first-child i{
+nav .item:first-child i {
     font-size: 1.9rem;
     padding-right: 0.5rem;
 }
 
-nav .item:nth-child(2){
+nav .item:nth-child(2) {
     margin: 1rem 0;
 }
 
-nav .item a{
+nav .item a {
     text-decoration: none;
     color: var(--main-txt-col);
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-nav .item a span{
+nav .item a span {
     padding-left: 0.7rem;
 }
 
 
-nav .item a:hover{
+nav .item a:hover {
     color: var(--white);
 }
 
 /* Nav Ends Here */
 
 /* Library Starts Here */
-.my-library{
+.my-library {
     margin: .6rem 0;
     padding: 1rem;
     background-color: var(--sub-bg);
@@ -110,23 +110,23 @@ nav .item a:hover{
     overflow: hidden;
 }
 
-.my-library>h2{
+.my-library>h2 {
     font-size: 1.4rem;
     padding: 0.5rem 0 1rem 1.6rem;
     color: var(--main-txt-col);
     font-weight: bold;
 }
 
-.my-library>div{
+.my-library>div {
     height: 85%;
     overflow-y: scroll;
 }
 
-.my-library>div:hover::-webkit-scrollbar-thumb{
+.my-library>div:hover::-webkit-scrollbar-thumb {
     background: var(--grey2);
 }
 
-.card{
+.card {
     color: var(--white);
     background-color: var(--grey);
     padding: 1.2rem;
@@ -138,7 +138,7 @@ nav .item a:hover{
     margin: 1.2rem 0;
 }
 
-.btn{
+.btn {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     font-weight: bold;
@@ -153,24 +153,24 @@ nav .item a:hover{
 /* Library Ends Here */
 
 /* Footer Starts Here */
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 180px;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: var(--main-txt-col);
     font-size: 0.8rem;
 }
 
-.footer a:hover{
+.footer a:hover {
     color: var(--white);
 }
 
-.footer button{
+.footer button {
     width: max-content;
     font-weight: bold;
     border-radius: 50px;
@@ -181,7 +181,7 @@ nav .item a:hover{
     cursor: pointer;
 }
 
-.footer button:hover{
+.footer button:hover {
     transform: scale(1.05);
     border: 1.5px solid var(--white);
 }
@@ -190,7 +190,7 @@ nav .item a:hover{
 
 
 /* Right Section Starts Here*/
-.box-right{
+.box-right {
     height: 97vh;
     /* background-color: rgb(167, 142, 112); */
     width: 85%;
@@ -206,7 +206,7 @@ nav .item a:hover{
 }
 
 /* Right NavBar */
-.navbar{
+.navbar {
     background-color: var(--sub-bg);
     display: flex;
     justify-content: space-between;
@@ -218,7 +218,11 @@ nav .item a:hover{
     border-bottom: 3px solid var(--black);
 }
 
-.navbar div i{
+.navbar>div .s_logo, .spo{
+    display: none;
+}
+
+.navbar div i {
     background-color: var(--grey);
     color: var(--main-txt-col);
     border-radius: 50%;
@@ -228,11 +232,11 @@ nav .item a:hover{
     cursor: pointer;
 }
 
-.navbar div i:hover{
+.navbar div i:hover {
     color: var(--white);
 }
 
-.navbar div button{
+.navbar div button {
     font-size: 1.2rem;
     padding: 0.7rem 1.2rem;
     border-radius: 50px;
@@ -242,32 +246,32 @@ nav .item a:hover{
     border: transparent;
 }
 
-.navbar div button:hover{
+.navbar div button:hover {
     transform: scale(1.05);
 }
 
-.navbar div button:first-child{
+.navbar div button:first-child {
     background-color: transparent;
     color: var(--grey2);
 }
 
-.navbar div button:first-child:hover{
+.navbar div button:first-child:hover {
     color: var(--white);
 }
 
 /* Song Cover Art Section */
-.song-cover{
+.song-cover {
     display: flex;
     padding: 2rem;
     background-color: rgb(40, 74, 71);
 }
 
-.song-cover .item:first-child{
+.song-cover .item:first-child {
     width: 200px;
     height: 200px;
 }
 
-.song-cover .item:first-child img{
+.song-cover .item:first-child img {
     width: 200px;
     height: 200px;
 }
@@ -280,16 +284,16 @@ nav .item a:hover{
     color: var(--white);
 }
 
-.song-cover .item .logo{
+.song-cover .item .logo {
     width: 40px;
     height: 40px;
 }
 
-.song-cover .item:first-child{
+.song-cover .item:first-child {
     box-shadow: 0 0 15px 0 var(--sub-bg);
 }
 
-.song-cover .item>div{
+.song-cover .item>div {
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -306,7 +310,7 @@ nav .item a:hover{
     text-decoration: underline;
 }
 
-.song-cover .item>div span{
+.song-cover .item>div span {
     font-weight: bold;
 }
 
@@ -331,8 +335,8 @@ nav .item a:hover{
 }
 
 
- /* Audio Controls Section  */
- .player{
+/* Audio Controls Section  */
+.player {
     background-color: var(--sub-bg);
     height: 150px;
     position: sticky;
@@ -341,54 +345,54 @@ nav .item a:hover{
     grid-template-columns: 1fr 150px;
     align-items: center;
     z-index: 8;
- }
+}
 
- .control{
+.control {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 2rem;
- }
+}
 
- .player .range{
+.player .range {
     display: flex;
     justify-content: center;
- }
+}
 
- #proggres-bar{
+#proggres-bar {
     width: 80%;
     cursor: pointer;
 }
 
 #current-time,
-#duration{
+#duration {
     color: var(--white);
     font-size: 15px;
     padding: 0px 5px;
 }
 
-.player .control-btn{
+.player .control-btn {
     display: flex;
     justify-content: space-evenly;
 }
 
-.player .control-btn>div i{
+.player .control-btn>div i {
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
 }
 
-.player .control-btn>div i:hover{
+.player .control-btn>div i:hover {
     color: var(--green);
 }
 
-.player .control-btn>div:last-child i:hover{
+.player .control-btn>div:last-child i:hover {
     color: red;
 }
 
 
 /* Title Bar Section */
-.title{
+.title {
     background-color: var(--sub-bg);
     padding: 0 1rem;
     position: sticky;
@@ -396,7 +400,7 @@ nav .item a:hover{
     z-index: 5;
 }
 
-.title>div{
+.title>div {
     color: var(--grey2);
     border-bottom: 1px solid var(--grey);
     display: grid;
@@ -406,18 +410,18 @@ nav .item a:hover{
     font-weight: 600;
 }
 
-.title i{
+.title i {
     margin-left: 0.7rem;
 }
- 
+
 
 /* Songs Section */
-.songs{
+.songs {
     background-color: var(--sub-bg);
     padding: 1rem;
 }
 
-.songs .s-card{
+.songs .s-card {
     display: grid;
     grid-template-columns: 30px 1.5fr 1fr 1fr 50px;
     color: var(--grey2);
@@ -426,7 +430,7 @@ nav .item a:hover{
     position: relative;
 }
 
-.upper-layer{
+.upper-layer {
     position: absolute;
     z-index: 3;
     top: 0;
@@ -437,35 +441,35 @@ nav .item a:hover{
     /* background-color: blueviolet; */
 }
 
-.songs .s-card:hover{
+.songs .s-card:hover {
     border-radius: 0.5rem;
     background-color: var(--grey);
 }
 
-.songs .s-card span:first-child{
+.songs .s-card span:first-child {
     font-size: 1.15rem;
 }
 
-.songs .s-card span{
+.songs .s-card span {
     font-weight: 500;
 }
 
-.songs .s-card .img-card{
+.songs .s-card .img-card {
     display: flex;
     align-items: center;
 }
 
-.songs .s-card .img-card img{
+.songs .s-card .img-card img {
     border-radius: 5px;
     margin-right: 0.5rem;
 }
 
-.songs .s-card .img-card h3{
+.songs .s-card .img-card h3 {
     color: var(--white);
     font-size: 1.2rem;
 }
 
-.songs .s-card .img-card p{
+.songs .s-card .img-card p {
     color: rgb(197, 196, 196);
 }
 
@@ -487,60 +491,60 @@ nav .item a:hover{
 
 @media screen and (max-width: 1100px) {
 
-    .box-left{
+    .box-left {
         min-width: 200px;
     }
 
-    nav .item{
+    nav .item {
         font-size: 1.1rem;
     }
-    
-    nav .item:first-child i{
+
+    nav .item:first-child i {
         font-size: 1.7rem;
         padding-right: 0.5rem;
     }
 
-    nav .item a{
+    nav .item a {
         font-size: 1rem;
     }
 
-    .my-library>h2{
+    .my-library>h2 {
         font-size: 1.2rem;
     }
 
-    .card h3{
+    .card h3 {
         font-size: 1rem;
     }
 
-    .card p{
+    .card p {
         font-size: 0.8rem;
     }
-    
-    .card .btn{
+
+    .card .btn {
         font-size: 0.75rem;
         padding: 0.4rem 0.7rem;
     }
 
-    .footer a{
+    .footer a {
         font-size: 0.7rem;
     }
 
-    .footer button{
+    .footer button {
         font-size: 0.7rem;
     }
 
     /* Right Side */
 
-    .navbar{
+    .navbar {
         padding: 0.3rem 1.4rem;
     }
-    
-    .navbar div i{
+
+    .navbar div i {
         font-size: 1.2rem;
         padding: 0.6rem 0.9rem;
     }
-        
-    .navbar div button{
+
+    .navbar div button {
         font-size: 1rem;
         padding: 0.6rem 1.1rem;
     }
@@ -549,68 +553,302 @@ nav .item a:hover{
         font-size: 3.5rem;
     }
 
-    .song-cover .item>div{
+    .song-cover .item>div {
         font-size: 0.7rem;
         gap: 0.3rem;
     }
 
-    .song-cover .item:first-child{
+    .song-cover .item:first-child {
         width: 150px;
         height: 150px;
     }
 
-    .song-cover .item:first-child img{
+    .song-cover .item:first-child img {
         width: 150px;
         height: 150px;
     }
 
-    .song-cover .item .logo{
+    .song-cover .item .logo {
         width: 25px;
         height: 25px;
     }
 
-    .player{
+    .player {
         position: sticky;
         top: 50px;
-     }
-    
-    .player .control-btn>div i{
+    }
+
+    .player .control-btn>div i {
         font-size: 1.6rem;
     }
 
-    #proggres-bar{
+    #proggres-bar {
         width: 75%;
     }
 
     #current-time,
-    #duration{
-    font-size: 12px;
-    } 
-
-    .song-img img{
-    height: 110px;
-    width: 110px;
-    margin-left: 1rem;
+    #duration {
+        font-size: 12px;
     }
 
-    .title{
-    position: sticky;
-    top: 200px;
+    .song-img img {
+        height: 110px;
+        width: 110px;
+        margin-left: 1rem;
     }
 
-    .songs .s-card .img-card h3{
-    font-size: 0.9rem;
+    .title {
+        position: sticky;
+        top: 200px;
     }
 
-    .songs .s-card .img-card p{
-   font-size: 0.8rem;
-   margin-top: 3px;
+    .songs .s-card .img-card h3 {
+        font-size: 0.9rem;
     }
 
-   .songs .s-card span{
-    font-size: 0.8rem;
-    }  
+    .songs .s-card .img-card p {
+        font-size: 0.8rem;
+        margin-top: 3px;
+    }
+
+    .songs .s-card span {
+        font-size: 0.8rem;
+    }
 }
 
 
+@media screen and (max-width: 950px) {
+    .box-left {
+        display: none;
+    }
 
+    .box-right {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .navbar div i {
+        font-size: 1.3rem;
+        padding: 0.5rem 0.8rem;
+        margin: 0 0.3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .song-cover .item h2 {
+        font-size: 2rem;
+    }
+
+    .song-cover .item>div {
+        font-size: 0.6rem;
+    }
+
+    .song-cover .item:first-child {
+        width: 120px;
+        height: 120px;
+    }
+
+    .song-cover .item:first-child img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .song-cover .item #pl {
+        font-size: 0.8rem;
+    }
+
+    .song-cover .item p {
+        font-size: 0.9rem;
+    }
+
+    .player .control-btn>div i {
+        font-size: 1.3rem;
+    }
+
+    .control .range {
+        padding-left: 0.8rem;
+    }
+
+    .player .song-img img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .title>div {
+        font-size: 0.8rem;
+    }
+
+    .songs {
+        padding: 0.5rem;
+    }
+
+    .songs .s-card .img-card img {
+        width: 45px;
+        height: 45px;
+        margin-right: 0.5rem;
+    }
+
+    .songs .s-card .img-card h3 {
+        font-size: 0.7rem;
+    }
+
+    .songs .s-card .img-card p {
+        font-size: 0.6rem;
+    }
+
+}
+
+
+@media screen and (max-width: 490px) {
+
+    .navbar {
+        padding: 0.2rem 0.5rem;
+    }
+
+    .navbar>div {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar>div .s_logo{
+        display: block;
+        width: 45px;
+    }
+
+    .navbar>div .spo{
+        display: block;
+        color: var(--white);
+        font-weight: 600;
+    }
+
+    .navbar div i {
+        font-size: 1.2rem;
+        display: none;
+    }
+
+    .navbar div button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .song-cover {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .song-cover .item h2 {
+        font-size: 1.7rem;
+    }
+
+    .song-cover .item>div {
+        font-size: 0.5rem;
+    }
+
+    .song-cover .item:first-child {
+        width: 70px;
+        height: 70px;
+    }
+
+    .song-cover .item:first-child img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .song-cover .item #pl {
+        font-size: 0.6rem;
+    }
+
+    .song-cover .item p {
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+
+    .song-cover .item>div img {
+        width: 10px;
+    }
+
+    .song-cover .item>div a {
+        font-weight: 400;
+        font-size: 0.6rem;
+    }
+
+    .song-cover .item>div span {
+        font-weight: 200;
+        font-size: 0.5rem;
+    }
+
+    .song-cover .item .logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .player {
+        position: sticky;
+        top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 110px;
+    }
+
+    .player .control-btn>div i {
+        font-size: 1.2rem;
+    }
+
+    .control .range {
+        padding-left: 0.8rem;
+    }
+
+    .player .song-img img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        position: sticky;
+        top: 182px;
+    }
+
+    .title>div {
+        display: grid;
+        grid-template-columns: 30px 1.6fr 1fr 1fr 30px;
+        padding: 0.5rem 0;
+        font-size: 0.7rem;
+    }
+
+    .songs {
+        padding: 0 0.5rem;
+    }
+
+    .upper-layer {
+        position: absolute;
+        height: 50px;
+    }
+
+    .songs .s-card {
+        display: grid;
+        grid-template-columns: 30px 1.6fr 1fr 1fr 25px;
+        padding: 0.5rem;
+    }
+
+    .songs .s-card .img-card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .songs .s-card .img-card h3 {
+        font-size: 0.55rem;
+        font-weight: 500;
+    }
+
+    .songs .s-card .img-card p {
+        font-size: 0.5rem;
+    }
+    
+    .songs .s-card span {
+        font-size: 0.6rem;
+    }
+
+}
