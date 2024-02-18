@@ -44,8 +44,19 @@ main {
     margin: 0 auto; */
 }
 
+.upper-div {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 49;
+    /* background-color: rgba(250, 235, 215, 0.645); */
+}
+
 .box-left {
-    min-width: 300px;
+    /* min-width: 300px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,6 +77,10 @@ nav .item {
     padding-left: 0.5rem;
     display: flex;
     align-items: center;
+}
+
+#close_btn {
+    display: none;
 }
 
 nav .item:first-child {
@@ -102,7 +117,7 @@ nav .item a:hover {
 /* Library Starts Here */
 .my-library {
     margin: .6rem 0;
-    padding: 1rem;
+    padding: 0 0 0.6rem 0.6rem;
     background-color: var(--sub-bg);
     border-radius: 0.7rem;
     height: 200px;
@@ -144,6 +159,7 @@ nav .item a:hover {
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
+    border: none;
 }
 
 .btn:hover {
@@ -218,7 +234,8 @@ nav .item a:hover {
     border-bottom: 3px solid var(--black);
 }
 
-.navbar>div .s_logo, .spo{
+.navbar>div .s_logo,
+.spo {
     display: none;
 }
 
@@ -618,8 +635,47 @@ nav .item a:hover {
 
 
 @media screen and (max-width: 950px) {
-    .box-left {
+
+    .navbar>div {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar>div .s_logo {
+        display: block;
+        width: 50px;
+    }
+
+    .navbar>div .spo {
+        display: block;
+        color: var(--white);
+        font-weight: 600;
+    }
+
+    .navbar div i {
         display: none;
+    }
+
+    .box-left {
+        height: 100vh;
+        /* max-width: 260px; */
+        max-width: 0px;
+        /* z-index: 50; */
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.5rem;
+        background-color: black;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #close_btn {
+        display: block;
+        padding-left: 4.5rem;
+        color: rgb(168, 168, 168);
+        font-size: 1.4rem;
     }
 
     .box-right {
@@ -706,29 +762,22 @@ nav .item a:hover {
 
 @media screen and (max-width: 490px) {
 
+    .box {
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    #close_btn {
+        display: block;
+        padding-left: 5.5rem;
+    }
+
     .navbar {
         padding: 0.2rem 0.5rem;
     }
 
-    .navbar>div {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar>div .s_logo{
+    .navbar>div .s_logo {
         display: block;
         width: 45px;
-    }
-
-    .navbar>div .spo{
-        display: block;
-        color: var(--white);
-        font-weight: 600;
-    }
-
-    .navbar div i {
-        font-size: 1.2rem;
-        display: none;
     }
 
     .navbar div button {
@@ -737,15 +786,15 @@ nav .item a:hover {
     }
 
     .song-cover {
-        padding: 1.2rem 1.5rem;
+        padding: 1.2rem;
     }
 
     .song-cover .item h2 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
     .song-cover .item>div {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 
     .song-cover .item:first-child {
@@ -846,7 +895,7 @@ nav .item a:hover {
     .songs .s-card .img-card p {
         font-size: 0.5rem;
     }
-    
+
     .songs .s-card span {
         font-size: 0.6rem;
     }

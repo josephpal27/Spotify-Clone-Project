@@ -21,6 +21,10 @@
     <div class="outer">
 
         <main>
+
+            <!-- Left Toggle div for small screens -->
+            <div class="upper-div" onclick="toggleLeft()"> </div>
+
             <div class="box-left">
                 <!-- Nav Section -->
                 <nav class="box">
@@ -28,6 +32,7 @@
                     <div class="item">
                         <i class="fa-brands fa-spotify"></i>
                         <span>Spotify</span>
+                        <i class="fa-solid fa-close" onclick="toggleLeft()" id="close_btn"></i>
                     </div>
 
                     <div class="item">
@@ -88,7 +93,7 @@
                 <!-- Footer Section -->
 
             </div>
-            <!-- box left complete (this clossing div is for box left)   -->
+            <!-- box left Ends Here (this clossing div is for box left)   -->
 
             <div class="box-right">
                 <!-- Navbar Section -->
@@ -97,8 +102,8 @@
                         <i class="fa-solid fa-chevron-left"></i>
                         <i class="fa-solid fa-chevron-right"></i>
 
-                        <img src="images/logo.png" alt="Logo" class="s_logo">
-                        <span class="spo">Spotify</span>
+                        <img src="images/logo.png" alt="Logo" class="s_logo" onclick="toggle()">
+                        <span class="spo" onclick="toggle()">Spotify</span>
 
                     </div>
                     <div>
@@ -350,6 +355,14 @@
             </div>
 
         </main>
+
+        <!-- Footer Starts Here -->
+        <div class="last_footer">
+            
+           
+        </div>
+        <!-- Footer Ends Here -->
+
     </div>
 
 

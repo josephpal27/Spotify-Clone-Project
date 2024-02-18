@@ -105,6 +105,7 @@ let songs = [
 
 
 // -----------------Initialize the variables----------------- //
+
 let songIndex = 0;
 let audioElement = new Audio('audios/Akon - Right Now.mp3');
 let masterPlay = document.getElementById('masterPlay');
@@ -264,6 +265,28 @@ function timecal(time) {
     else {
         return min + ':' + sec;
     }
+}
+
+
+
+// --------- Function From Left Menu Toggle ---------- //
+
+function toggle() {
+    let box_left = document.querySelector('.box-left');
+    let upper_div = document.querySelector('.upper-div');
+   
+    box_left.style.maxWidth = '260px';
+    box_left.style.zIndex = '50';
+    upper_div.style.display = 'block'; 
+}
+
+function toggleLeft() {
+    let box_left = document.querySelector('.box-left');
+    let upper_div = document.querySelector('.upper-div');
+   
+    box_left.style.maxWidth = '0px';
+    box_left.style.zIndex = '-1';
+    upper_div.style.display = 'none'; 
 }
 
 
