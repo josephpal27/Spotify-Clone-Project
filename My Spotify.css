@@ -60,6 +60,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* transition: all 0.5s ease-in-out; */
     /* background-color: aqua; */
 }
 
@@ -673,7 +674,7 @@ nav .item a:hover {
 
     #close_btn {
         display: block;
-        padding-left: 4.5rem;
+        margin-left: 4.5rem;
         color: rgb(168, 168, 168);
         font-size: 1.4rem;
     }
@@ -768,7 +769,7 @@ nav .item a:hover {
 
     #close_btn {
         display: block;
-        padding-left: 5.5rem;
+        margin-left: 5.5rem;
     }
 
     .navbar {
