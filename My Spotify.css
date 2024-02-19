@@ -10,7 +10,7 @@
     --black: black;
     --white: white;
     --main-txt-col: rgb(219, 217, 217);
-    --sub-bg: rgb(22, 22, 22);
+    --sub-bg: rgb(16, 16, 16);
     --green: rgb(12, 204, 12);
     --grey: rgb(42, 42, 42);
     --grey2: rgb(150, 150, 150);
@@ -40,8 +40,6 @@ main {
     height: 100vh;
     padding: 0.7rem;
     overflow: hidden;
-    /* max-width: 2000px;
-    margin: 0 auto; */
 }
 
 .upper-div {
@@ -52,15 +50,12 @@ main {
     width: 100%;
     height: 100%;
     z-index: 49;
-    /* background-color: rgba(250, 235, 215, 0.645); */
 }
 
 .box-left {
-    /* min-width: 300px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* transition: all 0.5s ease-in-out; */
     /* background-color: aqua; */
 }
 
@@ -504,6 +499,81 @@ nav .item a:hover {
 } */
 
 
+/* ------- Last Footer Starts Here ------- */
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(10, 10, 10);
+        padding: 1rem 5rem 2rem 5rem;
+        margin: 0 0.7rem;
+        border-radius: 10px;
+    }
+
+    .row .foot_top{
+        display: flex;
+        align-items: center;
+    }
+
+    .row .foot_top i{
+        color: rgb(0, 175, 0);
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .row .foot_top #spo_txt{
+        color: white;
+        font-size: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    .row .foot_top #spo_txt:hover{
+        scale: 1.05;
+    }
+
+    .columns{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.6rem;
+    }
+
+    .col{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col a{
+        text-decoration: none;
+        color: rgb(218, 218, 218);
+        font-size: 1rem;
+    }
+
+    .col span{
+        margin-top: 1rem;
+    }
+
+    .col a:hover{
+        color: white;
+        padding-bottom: 0.2rem;
+        border-bottom: 2px solid white;
+    }
+
+    .copyright{
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .copyright #copyright_text{
+        color: rgb(0, 175, 0);
+        margin-left: 0.5rem;
+        font-family: cursive;
+    }
+/* ------- Last Footer Ends Here ------- */
+
+
 
 /* --------- Media Quary ---------- */
 
@@ -632,6 +702,10 @@ nav .item a:hover {
     .songs .s-card span {
         font-size: 0.8rem;
     }
+
+    .row{
+        padding: 1rem 3rem 2rem 3rem;
+    }
 }
 
 
@@ -693,6 +767,18 @@ nav .item a:hover {
         font-size: 1.3rem;
         padding: 0.5rem 0.8rem;
         margin: 0 0.3rem;
+    }
+
+    .row{
+        padding: 1rem 1.5rem 2rem 1.5rem;
+        margin: 0.6rem 0 0 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .columns{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -787,11 +873,11 @@ nav .item a:hover {
     }
 
     .song-cover {
-        padding: 1.2rem;
+        padding: 1.3rem;
     }
 
     .song-cover .item h2 {
-        font-size: 1.8rem;
+        font-size: 1.94rem;
     }
 
     .song-cover .item>div {
@@ -809,11 +895,12 @@ nav .item a:hover {
     }
 
     .song-cover .item #pl {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
+        font-weight: 500;
     }
 
     .song-cover .item p {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         font-weight: 500;
     }
 
@@ -823,7 +910,7 @@ nav .item a:hover {
 
     .song-cover .item>div a {
         font-weight: 400;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .song-cover .item>div span {
@@ -901,4 +988,19 @@ nav .item a:hover {
         font-size: 0.6rem;
     }
 
+    .row .foot_top i{
+        font-size: 2.3rem;
+    }
+
+    .row .foot_top #spo_txt{
+        font-size: 1.3rem;
+    }
+
+    .col a{
+        font-size: 0.8rem;
+    }
+
+    .copyright{
+        font-size: 1rem;
+    }
 }
