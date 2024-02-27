@@ -50,6 +50,8 @@ main {
     width: 100%;
     height: 100%;
     z-index: 49;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.544);
 }
 
 .box-left {
@@ -569,7 +571,6 @@ nav .item a:hover {
     .copyright #copyright_text{
         color: rgb(0, 175, 0);
         margin-left: 0.5rem;
-        font-family: cursive;
     }
 /* ------- Last Footer Ends Here ------- */
 
